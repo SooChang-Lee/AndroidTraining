@@ -1,0 +1,123 @@
+{
+  "mainMenuList": [
+    {
+      "type": "group",
+      "title": "UI"
+    },
+    {
+      "type": "row",
+      "title": "Shared Element Transition",
+      "subTitle": "히어로 애니메이션",
+      "id": "ui_1"
+    },
+    {
+      "type": "row",
+      "title": "Sliding Pane Layout",
+      "subTitle": "대화면 최적화 마스터/디테일 레이아웃",
+      "id": "ui_2"
+    },
+    {
+      "type": "group",
+      "title": "List"
+    },
+    {
+      "type": "row",
+      "title": "RecyclerView",
+      "subTitle": "NotifyXXX로 데이터 갱신",
+      "id": "list_1"
+    },
+    {
+      "type": "row",
+      "title": "DiffUtil - AsyncListDiffer",
+      "subTitle": "DiffUtil(AsyncListDiffer)로 데이터 갱신",
+      "id": "list_2"
+    },
+    {
+      "type": "row",
+      "title": "ListAdapter",
+      "subTitle": "AsyncListDiffer가 포함된 Adapter",
+      "id": "list_3"
+    },
+    {
+      "type": "row",
+      "title": "Paging3 - PagingSource",
+      "subTitle": "Paging3 - PagingSource",
+      "id": "list_4"
+    },
+    {
+      "type": "row",
+      "title": "Jetpack Compose - Paging3",
+      "subTitle": "선언형 UI, MVI패턴",
+      "id": "list_5"
+    },
+
+    {
+      "type": "group",
+      "title": "OpenAPI"
+    },
+    {
+      "type": "row",
+      "title": "카카오 도서정보",
+      "subTitle": "카카오 도서정보 검색",
+      "id": "openapi_1"
+    },
+    {
+      "type": "row",
+      "title": "네이버 도서정보",
+      "subTitle": "네이버 도서정보 검색(XML)",
+      "id": "openapi_2"
+    },
+    {
+      "type": "row",
+      "title": "구글 도서정보",
+      "subTitle": "구글 도서정보 검색",
+      "id": "openapi_3"
+    },
+
+    {
+      "type": "group",
+      "title": "Map"
+    },
+    {
+      "type": "row",
+      "title": "구글맵",
+      "subTitle": "POI검색",
+      "id": "map_1"
+    },
+    {
+      "type": "row",
+      "title": "카카오 지도",
+      "subTitle": "POI검색, 길찾기",
+      "id": "map_2"
+    },
+    {
+      "type": "row",
+      "title": "네이버 지도",
+      "subTitle": "POI검색, 길찾기",
+      "id": "map_3"
+    },
+    {
+      "type": "row",
+      "title": "티맵",
+      "subTitle": "POI검색, 길찾기",
+      "id": "map_4"
+    },
+
+    {
+      "type": "group",
+      "title": "Streaming"
+    },
+    {
+      "type": "row",
+      "title": "WebRTC",
+      "subTitle": "1:n 화상회의, 채팅(WebSocket), 파일전송(DataChannel),\nJWT(AccessToken, RefreshToken)을 사용한 인증",
+      "id": "streaming_1"
+    },
+    {
+      "type": "row",
+      "title": "ExoPlayer",
+      "subTitle": "ExoPlayer를 이용한 동영상 스트리밍 & 컨트롤",
+      "id": "streaming_2"
+    }
+  ]
+}

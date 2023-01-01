@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="DuplicateIds"
+    app:startDestination="@id/slidingPaneLayoutDetailFragment">
+    <fragment
+        android:id="@+id/slidingPaneLayoutDetailFragment"
+        android:name="com.soochang.presentation.ui.layout.slidingpanelayout.detail.SlidingPaneLayoutDetailFragment"
+        android:label="" />
+</navigation>

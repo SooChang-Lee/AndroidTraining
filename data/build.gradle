@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+android {
+    namespace 'com.soochang.data'
+    compileSdk compile_sdk
+
+    defaultConfig {
+        minSdk min_sdk
+        targetSdk target_sdk
+
+        buildConfigField "String","GOOGLE_API_KEY",properties['google_api_key']
+        buildConfigField "String","KAKAO_API_KEY",properties['kakao_api_key']
+
+        buildConfigField "String","NAVER_CLIENT_ID",properties['naver_client_id']
+        buildConfigField "String","NAVER_CLIENT_SECRET",properties['naver_client_secret']
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(":domain")
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.KOTLINX_COROUTINES}"
+
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:${Versions.RETROFIT}")
+    implementation("com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}")
+
+    //Okhttp
+    implementation("com.squareup.okhttp3:okhttp:${Versions.OKHTTP}")
+    implementation("com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}")
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:${Versions.HILT}"
+    kapt "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
+
+    testImplementation "junit:junit:${Versions.JUNIT}"
+    androidTestImplementation "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_CORE}"
+}
+
+android {
+    namespace 'com.soochang.data'
+}

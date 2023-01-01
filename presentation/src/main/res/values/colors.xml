@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#E91E1E</color>
+    <color name="lightGray">#E4E4E4</color>
+    <color name="darkGray">#676767</color>
+
+    <!-- 메인메뉴 -->
+    <color name="main_menu_group_color">#B3B3B3</color>
+
+    <!-- 도서목록 -->
+    <color name="text_input_layout_stroke_color">#ACACAC</color>
+    <color name="book_title_spannable_color">#2196F3</color>
+
+    <!-- 지도 -->
+    <color name="color_category_hospital">#FF0000</color>
+    <color name="color_category_pharmacy">#1B8F26</color>
+    <color name="color_category_gas_station">#FF5722</color>
+</resources>

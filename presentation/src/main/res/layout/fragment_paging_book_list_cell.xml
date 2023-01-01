@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="bookItem"
+            type="com.soochang.domain.model.book.BookItem" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        >
+        <ImageView
+            android:id="@+id/img_thumbnail"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            bind_image='@{ bookItem.imageLinks.thumbnail }'
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginVertical="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                tools:text="Kolin in action(모바일 프로그래밍)"
+                android:text="@{ bookItem.title }"
+                bind_spannable_title="@{ bookItem }"
+                android:ellipsize="end"
+                android:lines="1"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/price_container"
+                android:visibility='@{ bookItem.saleability ? View.VISIBLE : View.GONE }'
+                >
+                <TextView
+                    android:id="@+id/txt_retail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textStyle="bold"
+                    tools:text="3,600원"
+                    android:text="@{ @string/thousand_comma_price(bookItem.retailPrice) }"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_list_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txt_retail_price"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="(3,6000원)"
+                    android:text="@{  @string/thousand_comma_price_with_braket(bookItem.listPrice) }"
+                    android:visibility="@{ bookItem.discounted ? View.VISIBLE : View.GONE }"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_discount_ratio"
+                    android:layout_alignParentEnd="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text='@{ bookItem.discountRatio + "%" }'
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:visibility="@{ bookItem.discounted ? View.VISIBLE : View.GONE }"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_not_for_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textStyle="bold"
+                android:text="@string/saleability_not_for_sale"
+                android:textColor="@color/red"
+                android:visibility='@{ bookItem.saleability ? View.GONE : View.VISIBLE }'
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                >
+                <TextView
+                    android:id="@+id/txt_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="이수창"
+                    android:text="@{ bookItem.strAuthors }"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_published_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="2022-09-07"
+                    android:text="@{ bookItem.publishedDate }"
+                    android:lines="1"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

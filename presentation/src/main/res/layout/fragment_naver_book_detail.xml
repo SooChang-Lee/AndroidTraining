@@ -1,0 +1,125 @@
+<layout>
+    <data/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.openapi.naverbooks.detail.NaverBookDetailFragment"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/img_thumbnail"
+                    android:transitionName="thumbnail_transition"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:id="@+id/book_detail_container"
+                    android:visibility="invisible"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/txt_title"
+                        android:transitionName="title_transition"
+                        tools:text="Kotlin in Action(모바일 프로그래밍)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/rl_price_container"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_retail_price"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textStyle="bold"
+                            tools:text="3,600원" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_list_price"
+                            android:layout_toEndOf="@id/txt_retail_price"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            tools:text=" (3,6000원)"
+                            />
+
+                        <TextView
+                            android:id="@+id/txt_discount_ratio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/red"
+                            android:textStyle="bold"
+                            tools:text="15%" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_publisher"
+                        android:layout_marginTop="8dp"
+                        tools:text="아이콕스"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_authors"
+                        tools:text="드미트리 제메로프, 스베트라나 이사코바"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="책 소개"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_contents"
+                        android:layout_marginTop="8dp"
+                        tools:text="코틀린이 안드로이드 공식 언어가 되면서 관심이 커졌다. 이 책은 코틀린 언어를 개발한 젯브레인의 코틀린 컴파일러 개발자들이 직접 쓴 일종의 공식 서적이라 할 수 있다. 코틀린 언어의 가장 큰 특징이라면 실용성을 들 수 있을 것이다. 이 책에서도 실용성을 강조하는 입장에서 쓰였다. 코틀린 기초를 소개하고, 고차함수, 객체지향, 제네릭스 등의 내용을 설명한다. 그리고 코틀린이 자바 언어를 어떻게 개선했고 기존 자바 프로젝트에서 코틀린을 함께 사용할 때"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_search_text_field">도서 제목을 입력하세요</string>
+
+    <string name="main_menu_header">CleanArchitecture(MultiModule)\nDI(Hilt)\nMVVM, MVI\nReactive stream(Flow)\nNavigationComponent\nDataBinding\nRetrofit\nGlide</string>
+
+    <string name="initial_page_description">검색어를 입력하여\n도서를 검색해보세요</string>
+    <string name="book_list_no_data_msg">검색 결과가 없어요</string>
+
+    <string name="saleability_not_for_sale">품절</string>
+
+    <string name="thousand_comma_price">%,2d원</string>
+    <string name="thousand_comma_price_with_braket">(%,2d원)</string>
+
+    <string name="error_msg_network_unavailable">인터넷 연결이 불안정 합니다.\n네트워크를 확인해주세요.</string>
+    <string name="error_msg_service_unavailable">서버오류가 발생하였습니다.\n잠시 후 다시 시도하여 주십시오.</string>
+    <string name="error_msg_unknown">알 수 없는 오류가 발생하였습니다.\n잠시 후 다시 시도하여 주십시오.</string>
+
+    <string name="error_snackbar_retry_button_title">재시도</string>
+    <string name="error_snackbar_back_button_title">뒤로</string>
+
+    <string name="twopane">Two Pane</string>
+    <string name="first">First: {myarg}</string>
+    <string name="second">Second: {myarg}</string>
+    <string name="third">Third: {myarg}</string>
+    <string name="fourth">Fourth: {myarg}</string>
+    <string name="fifth">Fifth: {myarg}</string>
+</resources>

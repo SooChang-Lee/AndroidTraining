@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- 구글 도서 API  -->
+        <domain includeSubdomains="true">books.google.com</domain>
+
+        <!-- 카카오맵  -->
+        <domain includeSubdomains="true">maps.daum-img.net</domain>
+    </domain-config>
+</network-security-config>

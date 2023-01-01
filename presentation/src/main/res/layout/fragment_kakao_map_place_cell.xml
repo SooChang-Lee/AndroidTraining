@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="placeItem"
+            type="com.soochang.domain.model.place.PlaceItem" />
+
+        <variable
+            name="placeItemListener"
+            type="com.soochang.presentation.ui.map.kakao.main.KakaoMapPlaceListAdapter.PlaceItemListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:onClick="@{ () -> placeItemListener.onClick(placeItem) }"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_place_name"
+            tools:text="상호명"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:text="@{placeItem.placeName}"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:lines="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_road_address_name"
+            tools:text="경기 김포시 고촌읍 장차로5번길 5-17"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="@{placeItem.roadAddress}"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:lines="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_phone"
+            tools:text="031-988-8275"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:text="@{placeItem.phone}"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_detail"
+                android:text="상세정보"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:onClick="@{ () -> placeItemListener.onDetailClick(placeItem) }"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_routing"
+                android:text="길찾기"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:onClick="@{ () -> placeItemListener.onNavigateRouteClick(placeItem) }"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

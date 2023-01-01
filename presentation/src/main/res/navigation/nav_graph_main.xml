@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainFragment"
+    >
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.soochang.presentation.ui.main.MainFragment"
+        android:label="Android Training"
+        tools:layout="@layout/fragment_main"
+        >
+        <action
+            android:id="@+id/action_mainFragment_to_googleBookListFragment"
+            app:destination="@id/googleBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_asyncListDifferBookListFragment"
+            app:destination="@id/asyncListDifferBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listAdapterBookListFragment"
+            app:destination="@id/listAdapterBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_generalBookListFragment"
+            app:destination="@id/generalBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_kakaoBookListFragment"
+            app:destination="@id/kakaoBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pagingBookListFragment"
+            app:destination="@id/pagingBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_composeBookListFragment"
+            app:destination="@id/composeBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_slidingPaneLayoutListFragment"
+            app:destination="@id/slidingPaneLayoutListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sharedElementTransitionListFragment"
+            app:destination="@id/sharedElementTransitionListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_naverBookListFragment"
+            app:destination="@id/naverBookListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_kakaoMapFragment"
+            app:destination="@id/kakaoMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleBookListFragment"
+        android:name="com.soochang.presentation.ui.openapi.googlebooks.list.GoogleBookListFragment"
+        android:label="GoogleBookListFragment" >
+        <action
+            android:id="@+id/action_googleBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleBookDetailFragment"
+        android:name="com.soochang.presentation.ui.openapi.googlebooks.detail.GoogleBookDetailFragment"
+        android:label="GoogleBookDetailFragment">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/asyncListDifferBookListFragment"
+        android:name="com.soochang.presentation.ui.recyclerview.asynclistdiffer.list.AsyncListDifferBookListFragment"
+        android:label="asyncListDifferBookListFragment" >
+        <action
+            android:id="@+id/action_asyncListDifferBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listAdapterBookListFragment"
+        android:name="com.soochang.presentation.ui.recyclerview.listadapter.list.ListAdapterBookListFragment"
+        android:label="ListAdapterBookListFragment" >
+        <action
+            android:id="@+id/action_listAdapterBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalBookListFragment"
+        android:name="com.soochang.presentation.ui.recyclerview.general.list.GeneralBookListFragment"
+        android:label="GeneralBookListFragment" >
+        <action
+            android:id="@+id/action_generalBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kakaoBookListFragment"
+        android:name="com.soochang.presentation.ui.openapi.kakaobooks.list.KakaoBookListFragment"
+        android:label="KakaoBookListFragment" >
+        <action
+            android:id="@+id/action_kakaoBookListFragment_to_kakaoBookDetailFragment"
+            app:destination="@id/kakaoBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kakaoBookDetailFragment"
+        android:name="com.soochang.presentation.ui.openapi.kakaobooks.detail.KakaoBookDetailFragment"
+        android:label="KakaoBookDetailFragment" >
+        <argument
+            android:name="isbn"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagingBookListFragment"
+        android:name="com.soochang.presentation.ui.recyclerview.pagingsource.list.PagingBookListFragment"
+        android:label="PagingBookListFragment" >
+        <action
+            android:id="@+id/action_pagingBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/composeBookListFragment"
+        android:name="com.soochang.presentation.ui.compose.list.ComposeBookListFragment"
+        android:label="ComposeBookListFragment" >
+        <action
+            android:id="@+id/action_composeBookListFragment_to_googleBookDetailFragment"
+            app:destination="@id/googleBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/slidingPaneLayoutListFragment"
+        android:name="com.soochang.presentation.ui.layout.slidingpanelayout.list.SlidingPaneLayoutListFragment"
+        android:label="도서검색" />
+    <fragment
+        android:id="@+id/sharedElementTransitionListFragment"
+        android:name="com.soochang.presentation.ui.heroanimation.list.SharedElementTransitionListFragment"
+        android:label="SharedElementTransitionListFragment" >
+        <action
+            android:id="@+id/action_sharedElementTransitionListFragment_to_sharedElementTransitionDetailFragment"
+            app:destination="@id/sharedElementTransitionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedElementTransitionDetailFragment"
+        android:name="com.soochang.presentation.ui.heroanimation.detail.SharedElementTransitionDetailFragment"
+        android:label="SharedElementTransitionDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/naverBookListFragment"
+        android:name="com.soochang.presentation.ui.openapi.naverbooks.list.NaverBookListFragment"
+        android:label="NaverBookListFragment" >
+        <action
+            android:id="@+id/action_naverBookListFragment_to_naverBookDetailFragment"
+            app:destination="@id/naverBookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/naverBookDetailFragment"
+        android:name="com.soochang.presentation.ui.openapi.naverbooks.detail.NaverBookDetailFragment"
+        android:label="NaverBookDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/kakaoMapFragment"
+        android:name="com.soochang.presentation.ui.map.kakao.main.KakaoMapFragment"
+        android:label="카카오맵" />
+</navigation>
