@@ -17,6 +17,7 @@ Paging3 - RemoteMediator
 - Jetpack compose + Paging3 이용한 도서목록 구현
 - SharedElementTransition구현 - 리스트행 선택시 이미지 애니메이션하며 상세보기로 이동
 - SlidingPaneLayout구현 - 대화면 최적화 마스터/디테일 레이아웃
+Compose List
 
 ## 구현내용
 ### 1. 도서정보
