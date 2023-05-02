@@ -40,16 +40,14 @@ Paging3 - RemoteMediator
 - 장소검색 결과 BottomSheet에 뛰우고, 지도에 마커 표시
 - 현재위치 얻어서 지도에 마커 표시(권한처리등 포함)
 - BottomSheet 스크롤시 지도영역이 가려지지 않도록 스크롤정보 활용하여 지도 위치 이동시켜주기
-- 각 플랫폼별로 제공하는 장소검색, 길찾기 API활용 
+- 각 플랫폼별로 제공하는 장소검색, 길찾기 API활용(kakao)
 
 ### 기타
 - local.properties에 api_key=""나 client_secret 설정 후 BuildConfig로 활용
 - release.apk 포함(app/release/app-release.apk)
 
-## 다음 구현해볼것
-1. Google Map, Naver Map, Kakao Map, T Map
-- POI검색, 길찾기
-2. WebRTC로 1:n 화상회의 구현
+## 다음 구현 할 것
+1. WebRTC로 1:n 화상회의 구현
 - 웹소켓과 푸쉬를 이용한 실시간 채팅
 - WebRTC data channel을 이용한 파일전송
 2. ExoPlayer를 이용한 동영상 스트리밍
